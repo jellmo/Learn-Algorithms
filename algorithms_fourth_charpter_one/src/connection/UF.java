@@ -1,14 +1,13 @@
 package connection;
 
-import edu.princeton.cs.algs4.*;
-
 /**
  * UF算法基本API封装
  */
-public class UF {
+public abstract class UF {
 
     /**
      * 表示所有分量组成的列表(分量id，以触点作为索引)
+     * 代表所有分量
      */
     private int[] id;
 
@@ -43,31 +42,19 @@ public class UF {
         return find(p) == find(q);
     }
 
-    public int find(int p) {
+    /**
+     * p触点所在分量的标识符
+     *
+     * @param p 触点索引(范围为0~n-1)
+     * @return 所在分量的标识符
+     */
+    public abstract int find(int p);
 
-        return 0;
-    }
-
-    public void union(int p, int q) {
-
-    }
-
-    public static void main(String[] args) {
-        //读取触点数量
-        int n = StdIn.readInt();
-        //设置分量个数并初始化分量列表
-        UF uf = new UF(n);
-        while (!StdIn.isEmpty()) {
-            //读取整数对
-            int p = StdIn.readInt();
-            int q = StdIn.readInt();
-            //如果已连接则忽略
-            if (uf.connected(p, q)) {
-                continue;
-            }
-            //未连接则归并分量并打印连接
-            uf.union(p, q);
-            StdOut.println(p + " " + q);
-        }
-    }
+    /**
+     * 连通p触点与q触点
+     *
+     * @param p p触点
+     * @param q q触点
+     */
+    public abstract void union(int p, int q);
 }
