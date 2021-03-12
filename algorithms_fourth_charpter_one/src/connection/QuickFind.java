@@ -4,19 +4,19 @@ import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
 /**
- * <p></p>
+ * <p>QuickFind算法代码</p>
  *
  * @author galaxy
  * @date 2021-03-07 23:42:29
  */
-public class quickFind extends UF {
+public class QuickFind extends UF {
 
     /**
      * 初始化连通分量id数组, 准备好了分量，后续才能在分量中填充触点
      *
      * @param n 分量个数
      */
-    public quickFind(int n) {
+    public QuickFind(int n) {
         super(n);
     }
 
@@ -35,7 +35,7 @@ public class quickFind extends UF {
         //读取触点数量
         int n = StdIn.readInt();
         //设置分量个数并初始化分量列表
-        UF uf = new quickFind(n);
+        UF uf = new QuickFind(n);
         while (!StdIn.isEmpty()) {
             //读取整数对
             int p = StdIn.readInt();
