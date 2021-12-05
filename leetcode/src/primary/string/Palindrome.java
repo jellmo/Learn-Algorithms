@@ -1,3 +1,5 @@
+package primary.string;
+
 /**
  * <p>
  * 125. 验证回文串      (难度: easy)
@@ -5,10 +7,10 @@
  * 说明：本题中，我们将空字符串定义为有效的回文串。
  * <p>
  * 思路：
- * 1. 双指针遍历
+ *     1. 双指针遍历
  * <p>
  * 题解：
- * 1. 字符串过滤操作使用stringbuffer
+ * 1. 字符串过滤操作使用stringbuffer，然后双指针遍历
  * 2. 字符串过滤操作使用Character.isLetterOrDigit()函数
  *
  * @author mohe
@@ -16,6 +18,7 @@
  */
 public class Palindrome{
 
+    /**答题**/
     public boolean isPalindrome(String s) {
         if (s==null || s.length()==0) {
             return true;
@@ -40,5 +43,20 @@ public class Palindrome{
             j--;
         }
         return flag;
+    }
+
+    /**使用string buffer**/
+    public boolean isPalindromeLC(String s) {
+        //使用string buffer筛去所有的非字母数字字符
+        StringBuffer buffer = new StringBuffer();
+        int n = s.length();
+        for (int i = 0; i < n; i++) {
+            char ch = s.charAt(i);
+            if (Character.isLetterOrDigit(ch)) {
+                buffer.append(Character.toLowerCase(ch));
+            }
+        }
+        StringBuffer reverse = new StringBuffer(buffer).reverse();
+        return reverse.toString().equals(buffer.toString());
     }
 }
