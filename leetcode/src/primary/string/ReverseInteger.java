@@ -28,4 +28,28 @@ public class ReverseInteger {
             return 0;
         }
     }
+
+    /**
+     * 先弹出最后一位数字，再加入新结果，即可完成反转，加入之前判断有无超出范围
+     *
+     * @param x
+     * @return
+     */
+    public static int solution(int x) {
+        int res = 0, digit = 0;
+        int flag = 1;
+        if (x < 0) {
+            flag = -1;
+            x *= -1;
+        }
+        while (x != 0) {
+            digit = x % 10;
+            if (res > (Integer.MAX_VALUE - digit) / 10) {
+                return 0;
+            }
+            res = res * 10 + digit;
+            x /= 10;
+        }
+        return res * flag;
+    }
 }
