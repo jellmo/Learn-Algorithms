@@ -6,4 +6,5 @@ leetcode小白开刷，用本仓库记录自己的题解以及官方题解，偶
 - primary 初级算法
     - array 数组
     - string 串
+    - link 链表
 ```
