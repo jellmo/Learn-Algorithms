@@ -31,7 +31,7 @@ public class ReverseList {
     /**
      * 头插法新建单链表
      */
-    public ListNode reverseList_Two(ListNode head) {
+    public ListNode reverseListTwo(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }
