@@ -23,7 +23,7 @@ public class MaxSubArray {
         if (nums != null || nums.length == 0) {
             return -1;
         }
-        int curSum = 0, maxSum = 0;
+        int curSum = 0, maxSum = nums[0];
         for (int i = 0; i < nums.length; i++) {
             if (curSum > 0) {
                 //正数则加到后面
