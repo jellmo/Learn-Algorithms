@@ -1,8 +1,7 @@
 package sword;
 
-import primary.link.ListNode;
+import basic.ListNode;
 
-import java.util.ArrayList;
 import java.util.Stack;
 
 /**

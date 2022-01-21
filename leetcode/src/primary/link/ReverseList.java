@@ -1,5 +1,7 @@
 package primary.link;
 
+import basic.ListNode;
+
 /**
  * <p>
  * 反转链表     (难度: easy)

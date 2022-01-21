@@ -1,5 +1,7 @@
 package primary.link;
 
+import basic.ListNode;
+
 /**
  * <p>
  * 删除链表中的节点

@@ -1,4 +1,4 @@
-package primary.link;
+package basic;
 
 /**
  * <p>
