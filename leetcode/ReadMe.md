@@ -7,6 +7,7 @@ leetcode小白开刷，用本仓库记录自己的题解以及官方题解，偶
     - array 数组
     - string 串
     - link 链表
-- basic 基本数据结构
+- basic 基本数据结构代码实现
 - sword 剑指offer
+- dynamic 动态规划相关题目
 ```
